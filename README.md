@@ -1,2 +1,2 @@
-# mw_neural_network
+# al_neural_network
 A three layers neural network model implemented in C++.

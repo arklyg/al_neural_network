@@ -1,4 +1,4 @@
-# mw_neural_network
+# Micro Wave Neural Network
 A three layers neural network model implemented in C++.
 Multi-thread supported on CPU supported.
 

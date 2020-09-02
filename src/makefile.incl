@@ -2,10 +2,10 @@
 MACRO_DEF = 
 
 #lib directory definations
-DIR_MWMATH_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_math/trunk/src/main
-DIR_MWNEURALNETWORK_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_neural_network/trunk/src/main
-DIR_MWSTL_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_stl/trunk/src/main
-DIR_MWGLOBAL_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_global/trunk/src/main
+DIR_MWMATH_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../mw_math/src/main
+DIR_MWNEURALNETWORK_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../mw_neural_network/src/main
+DIR_MWSTL_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../mw_stl/src/main
+DIR_MWGLOBAL_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../mw_global/src/main
 
 #lib file definations
 STATIC_LIB_LOG4CPLUS = /usr/local/lib/liblog4cplus.a
@@ -21,11 +21,11 @@ LIB_PTHREAD = -pthread
 #inc directory definations
 DIR_LOCAL_INC = /usr/local/include
 DIR_LOG4CPLUS_INC = /usr/local/include/log4cplus
-DIR_MWGLOBAL_INC = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_global/trunk/src/main
-DIR_MWMATH_INC = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_math/trunk/src/main
-DIR_MWNEURALNETWORK_INC = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_neural_network/trunk/src/main
-DIR_MWSTL_INC = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_stl/trunk/src/main
-DIR_MWGLOBAL_INC = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_global/trunk/src/main
+DIR_MWGLOBAL_INC = $(MWNEURALNETWORK_SRC_PATH)/../../mw_global/src/main
+DIR_MWMATH_INC = $(MWNEURALNETWORK_SRC_PATH)/../../mw_math/src/main
+DIR_MWNEURALNETWORK_INC = $(MWNEURALNETWORK_SRC_PATH)/../../mw_neural_network/src/main
+DIR_MWSTL_INC = $(MWNEURALNETWORK_SRC_PATH)/../../mw_stl/src/main
+DIR_MWGLOBAL_INC = $(MWNEURALNETWORK_SRC_PATH)/../../mw_global/src/main
 
 #inc definations
 INC_LOCAL = -I $(DIR_LOCAL_INC)

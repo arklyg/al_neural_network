@@ -16,7 +16,7 @@ all:$(TARGET)
 $(TARGET):$(LIB_OBJS)
 	$(AR) $@ $^
 
-%.o:%.cpp
+%.o:%.cc
 	$(CXX) $(CXXFLAGS) $(MACRO_DEF) $(MWNEURALNETWORK_MACRO) $(INC_MWSTL) $(INC_MWMATH) $(INC_MWGLOBAL) $(INC_LOG4CPLUS) -c $< -o $@
 
 clean:

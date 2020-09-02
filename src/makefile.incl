@@ -1,14 +1,11 @@
 #macro definations
 MACRO_DEF = 
 
-#pthread, rt and other stuff static
-STATIC_LINK = #-static
-
 #lib directory definations
-DIR_MWMATH_LIB = ../../mw_math/src/main
-DIR_MWNEURALNETWORK_LIB = ../../mw_neural_network/src/main
-DIR_MWSTL_LIB = ../../mw_stl/src/main
-DIR_MWGLOBAL_LIB = ../../mw_global/src/main
+DIR_MWMATH_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_math/trunk/src/main
+DIR_MWNEURALNETWORK_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_neural_network/trunk/src/main
+DIR_MWSTL_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_stl/trunk/src/main
+DIR_MWGLOBAL_LIB = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_global/trunk/src/main
 
 #lib file definations
 STATIC_LIB_LOG4CPLUS = /usr/local/lib/liblog4cplus.a
@@ -19,24 +16,25 @@ STATIC_LIB_MWGLOBAL = $(DIR_MWGLOBAL_LIB)/libmwglobal.a
 
 #other lib definations
 LIB_RT = -lrt
+LIB_PTHREAD = -pthread
 
 #inc directory definations
 DIR_LOCAL_INC = /usr/local/include
 DIR_LOG4CPLUS_INC = /usr/local/include/log4cplus
-DIR_MWGLOBAL_INC = ../../mw_global/src/main
-DIR_MWMATH_INC = ../../mw_math/src/main
-DIR_MWNEURALNETWORK_INC = ../../mw_neural_network/src/main
-DIR_MWSTL_INC = ../../mw_stl/src/main
-DIR_MWGLOBAL_INC = ../../mw_global/src/main
+DIR_MWGLOBAL_INC = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_global/trunk/src/main
+DIR_MWMATH_INC = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_math/trunk/src/main
+DIR_MWNEURALNETWORK_INC = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_neural_network/trunk/src/main
+DIR_MWSTL_INC = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_stl/trunk/src/main
+DIR_MWGLOBAL_INC = $(MWNEURALNETWORK_SRC_PATH)/../../../mw_global/trunk/src/main
 
 #inc definations
-INC_LOCAL = -I$(DIR_LOCAL_INC)
-INC_LOG4CPLUS = -I$(DIR_LOG4CPLUS_INC)
-INC_MWGLOBAL = -I$(DIR_MWGLOBAL_INC)
-INC_MWMATH = -I$(DIR_MWMATH_INC)
-INC_MWNEURALNETWORK = -I$(DIR_MWNEURALNETWORK_INC)
-INC_MWSTL = -I$(DIR_MWSTL_INC)
-INC_MWGLOBAL = -I$(DIR_MWGLOBAL_INC)
+INC_LOCAL = -I $(DIR_LOCAL_INC)
+INC_LOG4CPLUS = -I $(DIR_LOG4CPLUS_INC)
+INC_MWGLOBAL = -I $(DIR_MWGLOBAL_INC)
+INC_MWMATH = -I $(DIR_MWMATH_INC)
+INC_MWNEURALNETWORK = -I $(DIR_MWNEURALNETWORK_INC)
+INC_MWSTL = -I $(DIR_MWSTL_INC)
+INC_MWGLOBAL = -I $(DIR_MWGLOBAL_INC)
 
 #src directory definations
 DIR_MAIN = $(MWNEURALNETWORK_SRC_PATH)/$(MAIN)
@@ -46,8 +44,8 @@ DIR_TEST = $(MWNEURALNETWORK_SRC_PATH)/$(TEST)
 CXXFLAGS = -Wall -g -ftemplate-depth-50
 
 #files
-LIB_OBJS = $(patsubst %.cpp, %.o, $(wildcard $(DIR_MAIN)/*.cpp))
-TEST_OBJS = $(patsubst %.cpp, %.o, $(wildcard $(DIR_TEST)/*.cpp))
+LIB_OBJS = $(patsubst %.cc, %.o, $(wildcard $(DIR_MAIN)/*.cc))
+TEST_OBJS = $(patsubst %.cc, %.o, $(wildcard $(DIR_TEST)/*.cc))
 
 #common command
 MAKE = make

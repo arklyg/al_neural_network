@@ -1,5 +1,5 @@
 # Micro Wave Neural Network
-A three layers neural network framework implemented in C++.
+A three-layer neural network framework implemented in C++.
 Multi-thread on CPU supported.
 
 * Introduction  

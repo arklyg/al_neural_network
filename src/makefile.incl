@@ -41,7 +41,7 @@ DIR_MAIN = $(MWNEURALNETWORK_SRC_PATH)/$(MAIN)
 DIR_TEST = $(MWNEURALNETWORK_SRC_PATH)/$(TEST)
 
 #cxx flags
-CXXFLAGS = -Wall -g -ftemplate-depth-50
+CXXFLAGS = -Wall
 
 #files
 LIB_OBJS = $(patsubst %.cc, %.o, $(wildcard $(DIR_MAIN)/*.cc))
